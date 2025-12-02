@@ -1,66 +1,25 @@
-<!doctype html>
-<html lang="id">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VanzShop.id — Premium Digital & Aksesoris</title>
-  <meta name="description" content="VanzShop.id: produk digital,..., musik & video, dan aksesoris. Fast respon, harga bersahabat.">
-  <link rel="icon" href="/assets/logo.svg">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- BEGIN: GOLD THEME + BASE STYLES -->
-    <style>
-      :root{
-        --bg:#0b0b12; --text:#eaeaea; --muted:#9aa0a6;
-        --card:#12131c; --card-2:#171926;
-        --gold-1:#FFE9A3; --gold-2:#F8D37A; --gold-3:#E8B84E; --gold-4:#C6922E; --gold-5:#7A5B17;
-        --ring:rgba(255, 215, 128, .35);
-        --meteor-density: 1;
-      }
-      html[data-theme="light"]{
-        --bg:#f8fafc; --text:#0f172a; --muted:#475569;
-        --card:#ffffff; --card-2:#f1f5f9;
-        --ring:rgba(198,146,46,.25);
-      }
-      body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif}
-    </style>
-    <!-- END: GOLD THEME -->
-</head>
-<body>
-
-<header class="header container">
-  <a class="brand" href="#">
-    <img src="/assets/logo.svg" alt="VanzShop logo" width="36" height="36" loading="lazy" decoding="async">
-    <div class="brand-text">
-      <strong>VanzShop.id</strong>
-      <span>premium store</span>
-    </div>
-  </a>
-  <nav class="nav">
-    <a href="#kategori">Kategori</a>
-    <a href="#produk">Produk</a>
-    <a href="#keunggulan">Keunggulan</a>
-    <a class="btn sm" target="_blank" rel="noopener" href="https://wa.me/62895415204928?text=Halo%20VanzShop.id%2C%20saya%20mau%20tanya">WhatsApp</a>
-  </nav>
-</header>
-
 <!-- ========================================================= -->
 <!-- LINK HUB / MENU UTAMA VANZSHOP -->
 <!-- ========================================================= -->
 <section class="linkhub-wrapper">
   <div class="linkhub-card">
+
+    <!-- AVATAR / LOGO -->
     <div class="linkhub-avatar">
       <div class="linkhub-circle">V</div>
     </div>
+
     <div class="linkhub-title">
       <h1>VanzShop.id</h1>
       <p>✨ Solusi Produk Digital Terbaik ✨</p>
     </div>
+
+    <!-- ========================= -->
+    <!--     TOMBOL–TOMBOL        -->
+    <!-- ========================= -->
     <div class="linkhub-links">
-      <!-- ORDER DROPDOWN -->
+
+      <!-- ORDER SEKARANG (MENUBUKA 2 OPSI) -->
       <div class="linkhub-item linkhub-dropdown">
         <div class="linkhub-icon">🛒</div>
         <div class="linkhub-text">
@@ -68,10 +27,56 @@
           <span>Pilih metode pemesanan</span>
         </div>
         <div class="linkhub-arrow">▼</div>
+
+        <!-- SUBMENU -->
         <div class="linkhub-submenu">
-          <a class="submenu-btn" href="#produk">Beli via Webstore</a>
-          <a class="submenu-btn" href="https://t.me/VanzShopBot" target="_blank" rel="noopener">@VanzShopBot (Auto Order)</a>
+          <a class="submenu-btn" href="/#produk">Beli via Webstore</a>
+          <a class="submenu-btn" href="https://t.me/VanzShopBot" target="_blank">Bot Telegram Auto Order</a>
         </div>
       </div>
 
       <!-- WHATSAPP -->
+      <a class="linkhub-item" href="https://wa.me/62895415204928" target="_blank">
+        <div class="linkhub-icon">💬</div>
+        <div class="linkhub-text">
+          <strong>WhatsApp Admin</strong>
+          <span>0895 4152 04928</span>
+        </div>
+        <div class="linkhub-arrow">➜</div>
+      </a>
+
+      <!-- AKSES EMAIL -->
+      <a class="linkhub-item" href="https://vanzmail.web.id" target="_blank">
+        <div class="linkhub-icon">📧</div>
+        <div class="linkhub-text">
+          <strong>Akses Email</strong>
+          <span>Menuju vanzmail.web.id</span>
+        </div>
+        <div class="linkhub-arrow">➜</div>
+      </a>
+
+      <!-- GARANSI -->
+      <a class="linkhub-item" href="#" id="garansi-btn">
+        <div class="linkhub-icon">🛡️</div>
+        <div class="linkhub-text">
+          <strong>Ketentuan Garansi</strong>
+          <span>Coming soon...</span>
+        </div>
+        <div class="linkhub-arrow">➜</div>
+      </a>
+
+      <!-- FAQ -->
+      <a class="linkhub-item" href="https://vanzshop.com" target="_blank">
+        <div class="linkhub-icon">❓</div>
+        <div class="linkhub-text">
+          <strong>FAQ</strong>
+          <span>Pertanyaan yang sering ditanyakan</span>
+        </div>
+        <div class="linkhub-arrow">➜</div>
+      </a>
+
+    </div>
+  </div>
+</section>
+<!-- ========================================================= -->
+<!-- END LINK HUB -->
