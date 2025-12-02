@@ -1,107 +1,47 @@
-:root{--bg:#0b0f14;--panel:#0e131a;--line:#1a2030;--text:#dfe6ef;--muted:#9aa4b2;--gold:#d4af37;--gold-2:#b89317}
-*{box-sizing:border-box}html,body{margin:0;padding:0}
-body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,Arial,sans-serif}
-.container{max-width:1280px;margin:0 auto;padding:0 20px}
-.header{display:flex;justify-content:space-between;align-items:center;padding:16px 0;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(11,15,20,.8);backdrop-filter:blur(8px);z-index:10}
-.brand{display:flex;gap:10px;align-items:center;text-decoration:none;color:inherit}
-.brand-text span{display:block;color:var(--muted);font-size:12px;margin-top:2px}
-.nav{display:flex;gap:14px;align-items:center}
-.nav a{color:var(--text);text-decoration:none;opacity:.9}
-.nav a:hover{opacity:1}
-.btn{border:1px solid var(--line);padding:10px 14px;border-radius:10px;text-decoration:none;color:var(--text)}
-.btn.primary{background:linear-gradient(135deg,var(--gold),var(--gold-2));border-color:transparent;color:#111;font-weight:700}
-.btn.ghost{background:transparent}
-.btn.sm{padding:8px 12px;font-size:14px}
-.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:28px 0}
-.hero h1{font-size:40px;line-height:1.1;margin:0 0 8px}
-.gold{color:var(--gold)}.mark{background:linear-gradient(135deg,var(--gold),var(--gold-2));-webkit-background-clip:text;color:transparent}
-.hero p{color:var(--muted)}
-.cta{display:flex;gap:10px;margin-top:14px}
-.badges{display:flex;gap:14px;margin:12px 0 0;padding:0;list-style:none;color:var(--muted);flex-wrap:wrap}
-.hero-art img{width:100%;border-radius:16px;border:1px solid var(--line)}
-.cats{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}
-.chip{background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:8px 12px;color:var(--text)}.chip.active{border-color:var(--gold);color:var(--gold)}
-.section-title{font-size:24px;margin:26px 0 12px}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column}
-.card img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#111}
-.card-body{padding:14px;display:flex;gap:8px;flex-direction:column}
-.pill{display:inline-block;padding:4px 8px;border-radius:999px;border:1px solid var(--line);font-size:12px;color:var(--muted)}
-.row{display:flex;justify-content:space-between;align-items:center;margin-top:4px}
-.price{color:var(--gold);font-weight:800}.desc{color:var(--muted)}
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:28px auto}
-.feature{display:flex;gap:12px;align-items:flex-start;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px}
-.feature .ico{width:40px;height:40px;display:grid;place-items:center;background:#151b26;border:1px solid var(--line);border-radius:10px;font-size:20px}
-.footer{border-top:1px solid var(--line);margin-top:28px}
-.foot-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:18px;padding:18px 0}
-.foot-brand{gap:10px;margin-bottom:10px}
-.muted{color:var(--muted)}.links{margin:0;padding:0;list-style:none;display:grid;gap:8px}
-.wa{position:fixed;right:16px;bottom:16px;background:#25d366;border-radius:999px;padding:10px;box-shadow:0 16px 40px rgba(0,0,0,.35)}.wa img{width:28px;height:28px;display:block}
-@media (max-width:980px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.foot-grid{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.grid{grid-template-columns:1fr}.nav{display:none}.hero h1{font-size:30px}}
+/* =========================================================
+   LINK HUB STYLE 
+   ========================================================= */
 
-
-/* === Banner Carousel === */
-.banner-carousel{position:relative;width:100%;max-width:1200px;margin:20px auto;overflow:hidden;border-radius:20px;box-shadow:0 4px 10px rgba(0,0,0,.15)}
-.banner-carousel .slides{display:flex;transition:transform .5s ease-in-out}
-.banner-carousel img{width:100%;flex-shrink:0;display:block}
-.banner-carousel button{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,.5);color:#fff;border:0;font-size:24px;padding:10px;cursor:pointer;border-radius:50%}
-.banner-carousel .prev{left:10px}
-.banner-carousel .next{right:10px}
-@media (max-width:768px){.banner-carousel{border-radius:12px} .banner-carousel button{font-size:20px;padding:8px}}
-
-
-/* === Banner Carousel Layout Tweak === */
-.hero > .banner-carousel{grid-column:1 / -1;margin-top:16px}
-.banner-carousel{max-width:100%;}
-.banner-carousel button{font-size:28px;padding:12px}
-
-
-/* === Luxe polish & hover pop-up on product logos === */
-.card{position:relative;transition:transform .35s cubic-bezier(.2,.8,.2,1), box-shadow .35s;will-change:transform}
-.card:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.35), 0 0 0 1px rgba(212,175,55,.15)}
-.card a img{transition:transform .5s cubic-bezier(.2,.8,.2,1), filter .5s}
-.card:hover a img{transform:translateY(-2px) scale(1.06);filter:drop-shadow(0 12px 24px rgba(0,0,0,.35))}
-
-/* Tilt effect (set via JS using --rx/--ry) */
-.card.tilt{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-2px)}
-.card.tilt:hover{transform:perspective(900px) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg)) translateY(-8px)}
-
-/* Quick glow on hover title */
-.card h3 a{background:linear-gradient(90deg,#fff,#d4af37,#fff);background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;opacity:.9;transition:opacity .3s, background-position .7s}
-.card:hover h3 a{opacity:1;background-position:100% 0}
-
-/* Fancy buttons */
-.btn.primary{box-shadow:0 8px 20px rgba(212,175,55,.25)}
-.btn.primary:hover{filter:brightness(1.05)}
-
-/* === Banner: drag + parallax + cursor hint === */
-.banner-carousel{overflow:hidden;border-radius:20px;position:relative}
-.banner-carousel .slides{display:flex;transition:transform .5s cubic-bezier(.2,.8,.2,1);cursor:grab}
-.banner-carousel.dragging .slides{cursor:grabbing;transition:none}
-.banner-carousel img{width:100%;height:100%;flex:0 0 100%;object-fit:cover;transform:translateZ(0);will-change:transform;filter:saturate(1.02)}
-.banner-dots{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);display:flex;gap:8px;z-index:5}
-.banner-dots button{width:8px;height:8px;border-radius:999px;border:1px solid rgba(255,255,255,.6);background:rgba(0,0,0,.2)}
-.banner-dots button.active{background:#fff;border-color:transparent}
-
-/* subtle gradient edges */
-.banner-carousel::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.0),rgba(0,0,0,.05) 60%,rgba(0,0,0,.25))}
-
-/* Cursor hint */
-.banner-hint{position:absolute;right:16px;bottom:14px;background:rgba(0,0,0,.45);color:#fff;padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid rgba(255,255,255,.1)}
-
-
-/* === Performance optimizations for mobile/touch === */
-@media (hover: none), (pointer: coarse) {
-  .card, .card:hover { transform: none !important; box-shadow: none !important; }
-  .card a img { transform: none !important; filter: none !important; }
+.linkhub-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px 16px 20px;
 }
-@media (max-width: 768px) {
-  .card { transition: transform .2s ease, box-shadow .2s ease; }
-  .card:hover { box-shadow: 0 10px 18px rgba(0,0,0,.22), 0 0 0 1px rgba(212,175,55,.10); }
+
+.linkhub-card {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255,255,255,0.03);
+  padding: 28px 24px;
+  border-radius: 22px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.1);
 }
-@media (prefers-reduced-motion: reduce) {
-  * { animation: none !important; transition: none !important; }
+
+.linkhub-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
 }
-.banner-carousel img { will-change: transform; }
-.grid .card { will-change: transform; }
+
+.linkhub-circle {
+  width: 82px;
+  height: 82px;
+  border-radius: 50%;
+  background: #ffffff10;
+  border: 2px solid rgba(255,255,255,0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.linkhub-title {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.linkhub-title h1 {
