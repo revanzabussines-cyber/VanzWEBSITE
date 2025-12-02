@@ -1,47 +1,159 @@
-/* =========================================================
-   LINK HUB STYLE 
-   ========================================================= */
+/* ======================================
+   BASE
+====================================== */
+body {
+  margin: 0;
+  padding: 0;
+  background: #0b0b12;
+  color: #fff;
+  font-family: Inter, sans-serif;
+}
 
+/* ======================================
+   WRAPPER
+====================================== */
 .linkhub-wrapper {
-  width: 100%;
   display: flex;
   justify-content: center;
   padding: 40px 16px 20px;
 }
 
+/* CARD UTAMA */
 .linkhub-card {
   width: 100%;
   max-width: 480px;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255,255,255,0.05);
   padding: 28px 24px;
   border-radius: 22px;
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255,255,255,0.1);
 }
 
+/* AVATAR BULAT */
 .linkhub-avatar {
   display: flex;
   justify-content: center;
   margin-bottom: 12px;
 }
-
 .linkhub-circle {
   width: 82px;
   height: 82px;
   border-radius: 50%;
-  background: #ffffff10;
-  border: 2px solid rgba(255,255,255,0.15);
+  background: linear-gradient(135deg, #4745ff, #6c4bff);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 32px;
-  font-weight: 700;
+  font-size: 34px;
+  font-weight: 800;
   color: #fff;
+  border: 3px solid rgba(255,255,255,0.2);
 }
 
+/* TITLE */
 .linkhub-title {
   text-align: center;
   margin-bottom: 28px;
 }
-
 .linkhub-title h1 {
+  margin: 0;
+  font-size: 28px;
+}
+.linkhub-title p {
+  margin: 6px 0 0;
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* ======================================
+   ITEM & TOMBOL
+====================================== */
+.linkhub-links {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.linkhub-item {
+  padding: 15px 18px;
+  background: rgba(255,255,255,0.07);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  color: #fff;
+  transition: 0.2s;
+  position: relative;
+}
+
+.linkhub-item:hover {
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+}
+
+.linkhub-left {
+  display: flex;
+  align-items: center;
+}
+
+.linkhub-icon {
+  font-size: 22px;
+}
+
+.linkhub-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.linkhub-text strong {
+  font-size: 16px;
+}
+.linkhub-text span {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.linkhub-arrow {
+  opacity: 0.7;
+}
+
+/* ======================================
+   DROPDOWN
+====================================== */
+.linkhub-dropdown {
+  cursor: pointer;
+}
+.linkhub-dropdown .linkhub-arrow {
+  transition: 0.3s;
+}
+.linkhub-dropdown.open .linkhub-arrow {
+  transform: rotate(180deg);
+}
+
+/* SUBMENU */
+.linkhub-submenu {
+  display: none;
+  flex-direction: column;
+  margin-top: 12px;
+  gap: 10px;
+}
+
+.linkhub-dropdown.open .linkhub-submenu {
+  display: flex;
+}
+
+.submenu-btn {
+  padding: 12px 15px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.submenu-btn:hover {
+  background: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
